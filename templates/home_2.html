@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>{{title}}</title>
+    
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles7.css') }}">
+    <script src="https://use.fontawesome.com/3fa36ae73c.js"></script>
+
+    <style>
+        h1 { color: #FF585D; }
+        p {color:#FF585D}
+      </style>
+
+</head>
+<body>
+        <div class="container">
+        <div class="centered">
+            
+       <center><h1><b>Airline   </b><span class="badge badge-secondary">   Customer Statisifciation Prediction</span></h1></center>
+   
+            
+        </div>
+        </div>
+
+    <!-- Prediction Form -->
+    <div class='div2'>
+        <center><form action="{{ url_for('predict') }}" method="POST">
+            <input class="form-input" type="text" name="Age" placeholder="Age of Customer"><br>
+           <input class="form-input" type="text" name="Flight_Distance" placeholder="Flight Distance"><br>
+            <input class="form-input" type="text" name="Seat_comfort" placeholder="Rate a Seat Comfort (Rate: 0 to 5)?"><br>
+            <input class="form-input" type="text" name="time_convenient" placeholder="Rate a Time Convenient (Rate: 0 to 5)?"><br>
+            <input class="form-input" type="text" name="Food_and_drink" placeholder="Rate the Food and drink (Rate: 0 to 5)? "><br>
+           <input class="form-input" type="text" name="Gate_location" placeholder="Rate the Gate location (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Inflight_wifi_service" placeholder="Rate the Inflight wifi service (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Inflight_entertainment" placeholder="Rate the Inflight entertainment (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Online_support" placeholder="Rate the Online support (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Ease_of_Online_booking" placeholder="Rate the Ease of Online booking (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="On_board_service" placeholder="Rate the On-board service (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Leg_room_service" placeholder="Rate the Leg room service (Rate: 0 to 5)?"><br>
+
+           <input class="form-input" type="text" name="Baggage_handling" placeholder="Rate the Baggage handling (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Checkin_service" placeholder="Rate the Checkin service (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Cleanliness" placeholder="Rate the Cleanliness (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Online_boarding" placeholder="Rate the Online boarding (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Departure_Delay_in_Minutes" placeholder="Rate the Departure Delay in Minutes (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Arrival_Delay_in_Minutes" placeholder="Rate the Arrival Delay in Minutes (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Gender_Female" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Gender_Male" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Type_Loyal_customer" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Type_disloyal_Customer" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Travel_Business_travel" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Travel_Personal_Travel" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Class_Business" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Class_Eco" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Class_Eco_Plus" placeholder="Yes or No (Type: 1 or 0)?"><br>
+
+    <input type="submit" class="btn btn-secondary" value="Predict the Experience">
+    </form></center>
+    </div>
+	
+	<center> <form action="{{ url_for('predict') }}" method="POST">
+  <div class="form-row"> 
+    <div class="col">
+            <input class="form-input" type="text" name="Age" placeholder="Age of Customer"><br>
+           <input class="form-input" type="text" name="Flight_Distance" placeholder="Flight Distance"><br>
+            <input class="form-input" type="text" name="Seat_comfort" placeholder="Rate a Seat Comfort (Rate: 0 to 5)?"><br>
+            <input class="form-input" type="text" name="time_convenient" placeholder="Rate a Time Convenient (Rate: 0 to 5)?"><br>
+            <input class="form-input" type="text" name="Food_and_drink" placeholder="Rate the Food and drink (Rate: 0 to 5)? "><br>
+           <input class="form-input" type="text" name="Gate_location" placeholder="Rate the Gate location (Rate: 0 to 5)?"><br>
+	</div>
+		<div class="col">
+		           <input class="form-input" type="text" name="Inflight_wifi_service" placeholder="Rate the Inflight wifi service (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Inflight_entertainment" placeholder="Rate the Inflight entertainment (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Online_support" placeholder="Rate the Online support (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Ease_of_Online_booking" placeholder="Rate the Ease of Online booking (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="On_board_service" placeholder="Rate the On-board service (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Leg_room_service" placeholder="Rate the Leg room service (Rate: 0 to 5)?"><br>
+    </div>
+		<div class="col">
+           <input class="form-input" type="text" name="Baggage_handling" placeholder="Rate the Baggage handling (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Checkin_service" placeholder="Rate the Checkin service (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Cleanliness" placeholder="Rate the Cleanliness (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Online_boarding" placeholder="Rate the Online boarding (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Departure_Delay_in_Minutes" placeholder="Rate the Departure Delay in Minutes (Rate: 0 to 5)?"><br>
+           <input class="form-input" type="text" name="Arrival_Delay_in_Minutes" placeholder="Rate the Arrival Delay in Minutes (Rate: 0 to 5)?"><br>
+
+    </div>
+		<div class="col">
+           <input class="form-input" type="text" name="Gender_Female" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Gender_Male" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Type_Loyal_customer" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Type_disloyal_Customer" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Travel_Business_travel" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Travel_Personal_Travel" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Class_Business" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Class_Eco" placeholder="Yes or No (Type: 1 or 0)?"><br>
+           <input class="form-input" type="text" name="Class_Eco_Plus" placeholder="Yes or No (Type: 1 or 0)?"><br>
+
+    </div>	
+  </div>
+</form>
+
+  <!-- Result -->
+  <div class="map">
+    <center><p style="background-color:lightblue;font-size:25px" class='map-p'> <b></b></p></center>
+</div>
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

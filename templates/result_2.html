@@ -1,0 +1,224 @@
+<html>
+<head>
+    <title>{{title}}</title>
+    
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles5.css') }}">
+    <script src="https://use.fontawesome.com/3fa36ae73c.js"></script>
+    <style>
+        h1 { color: #FF585D; }
+        p {color:#FF585D}
+      </style>
+
+</head>
+<body>
+    <img src="static/logo.png" alt="HTML5 Icon"  style="width:400px;height:200px;">
+    <div class="container">
+        <div class="centered">
+            
+       <center><h1><b>airbnb </b><span class="badge badge-secondary">Prices in NYC</span></h1></center>
+   
+            
+        </div>
+        </div>
+
+    <!-- Prediction Form -->
+    <div class='div2'>
+        <center><form action="{{ url_for('predict') }}" method="POST">
+            <input class="form-input" type="text" name="Age" placeholder="Age of Customer"><br>
+            <input class="form-input" type="text" name="Flight_Distance" placeholder="Flight_Distance"><br>
+			 <select class="form-input align-center" name="Seat_comfort">
+                <option value="none">--- Rate a Seat Comfort (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>	
+			 <select class="form-input align-center" name="DepartureArrival_time_convenient">
+                <option value="none">--- Rate a Time Convenient (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>				 
+			 <select class="form-input align-center" name="Food_and_drink">
+                <option value="none">--- Rate the Food and drink (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>				 
+			 <select class="form-input align-center" name="Gate_location">
+                <option value="none">--- Rate the Gate location (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>				 
+			 <select class="form-input align-center" name="Inflight_wifi_service">
+                <option value="none">--- Rate the Inflight wifi service (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>				
+
+			 <select class="form-input align-center" name="Inflight_entertainment">
+                <option value="none">--- Rate the Inflight entertainment (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>	
+			 <select class="form-input align-center" name="Online_support">
+                <option value="none">--- Rate the Online support (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>		
+			 <select class="form-input align-center" name="Ease_of_Online_booking">
+                <option value="none">--- Rate the Ease of Online booking (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>	
+
+			 <select class="form-input align-center" name="On_board_service">
+                <option value="none">--- Rate the On-board service (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>				
+
+			 <select class="form-input align-center" name="Leg_room_service">
+                <option value="none">--- Rate the Leg room service (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>	
+			 <select class="form-input align-center" name="Baggage_handling">
+                <option value="none">--- Rate the Baggage handling (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>	
+			 <select class="form-input align-center" name="Checkin_service">
+                <option value="none">--- Rate the Checkin service (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>			
+			 <select class="form-input align-center" name="Cleanliness">
+                <option value="none">--- Rate the Cleanliness (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>		
+			 <select class="form-input align-center" name="Online_boarding">
+                <option value="none">--- Rate the Online boarding (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>			
+			 <select class="form-input align-center" name="Departure_Delay_in_Minutes">
+                <option value="none">--- Rate the Departure Delay in Minutes (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>			
+			 <select class="form-input align-center" name="Arrival_Delay_in_Minutes">
+                <option value="none">--- Rate the Arrival Delay in Minutes (Rate: 0 to 5)? ---</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>				
+			 </select><br>					 
+
+            <!-- Batting Team Dropdown -->
+            <select class="form-input align-center" name="Gender">
+                <option value="none">--- Select a Gender ---</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select><br>
+            <!-- Bowling Team Dropdown -->
+            <select class="form-input align-center" name="Customer_Type">
+                <option value="none">--- Select a Type of Customer--</option>
+                <option value="Loyal_Customer">Loyal Customer</option>
+                <option value="Disloyal_Customer">Disloyal Customer</option>
+            </select><br>       
+
+			<select class="form-input align-center" name="Travel">
+                <option value="none">--- Select a Type of Travel ---</option>
+                <option value="Business_travel">Business travel</option>
+                <option value="Personal_Travel">Personal Travel</option>
+            </select><br>
+			<select class="form-input align-center" name="Class">
+                <option value="none">--- Select a Type of Class ---</option>
+                <option value="Business">Business</option>
+                <option value="Eco">Eco</option>
+                <option value="Eco_Plus">Eco Plus</option>
+            </select><br>
+    <input type="submit" class="btn btn-secondary" value="Predict the Experience">
+    </form></center>
+    </div>
+    <!-- Result -->
+    <div class="results">
+        <center><p style="background-color:lightblue;font-size:25px" class='result-p'> <b>Airbnb Property Prices in this area is $ {{ my_prediction}}.</b></p></center>
+    </div>
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
